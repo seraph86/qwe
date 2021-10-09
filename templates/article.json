@@ -17,21 +17,6 @@
       "blocks": {
         "featured_image": {
           "type": "featured_image",
-<<<<<<< HEAD
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "content": {
-          "type": "content",
-          "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {}
-=======
           "settings": {
             "image_height": "adapt"
           }
@@ -51,9 +36,7 @@
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
->>>>>>> b77268703739855f241800c614b0ac63f3b2f8f1
+          "settings": {}
         }
       },
       "block_order": [
