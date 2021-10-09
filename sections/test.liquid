@@ -1,0 +1,31 @@
+<article>
+    {%- for block in section.blocks -%}
+        {{block.type}}
+        {%- case block.type -%}
+            {%- when 'title' -%}
+                {{article.id}}
+            {%- else -%}
+            
+        {%- endcase -%}
+    {%- endfor -%}
+</article>
+{% schema %}
+{
+    "name": "test",
+    "tag": "section",
+    "blocks": [
+        {
+            "name": "Title",
+            "type": "title",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "default": "Welcome to our store",
+                    "label": "Heading"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

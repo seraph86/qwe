@@ -1,27 +1,35 @@
 {
   "sections": {
+    "test": {
+      "type": "test",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title"
+      ]
+    },
     "main": {
       "type": "main-article",
       "blocks": {
         "featured_image": {
           "type": "featured_image",
-          "settings": {
-          }
+          "settings": {}
         },
         "title": {
           "type": "title",
-          "settings": {
-          }
+          "settings": {}
         },
         "content": {
           "type": "content",
-          "settings": {
-          }
+          "settings": {}
         },
         "share": {
           "type": "share",
-          "settings": {
-          }
+          "settings": {}
         }
       },
       "block_order": [
@@ -30,11 +38,11 @@
         "share",
         "content"
       ],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [
+    "test",
     "main"
   ]
 }
