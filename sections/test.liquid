@@ -1,28 +1,37 @@
-<article>
-    {%- for block in section.blocks -%}
-        {{block.type}}
-        {%- case block.type -%}
-            {%- when 'title' -%}
-                {{article.id}}
-            {%- else -%}
-            
-        {%- endcase -%}
-    {%- endfor -%}
-</article>
+{{ section.settings.text }}
+<br/>
+{%- for block in section.blocks -%}
+    {%- case block.type -%}
+        {%- when 'announcement' -%}
+            {{block.settings.qwer}}
+            <br/>
+        {%- else -%}
+    {%- endcase -%}
+{%- endfor -%}
+
 {% schema %}
 {
-    "name": "test",
+    "name": "Testing",
     "tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "text",
+            "default": "Welcome to our store 111",
+            "label": "section title"
+        }
+    ],
     "blocks": [
         {
-            "name": "Title",
-            "type": "title",
+            "name": "Announcement",
+            "type": "announcement",
             "settings": [
                 {
                     "type": "text",
-                    "id": "heading",
-                    "default": "Welcome to our store",
-                    "label": "Heading"
+                    "id": "qwer",
+                    "label": "block title",
+                    "info": "More info about Block",
+                    "placeholder": "A placeholder value for the input"
                 }
             ]
         }
