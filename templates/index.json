@@ -36,7 +36,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/bmw-m2-nfs-raining-4k-ww.jpg",
         "image_2": "shopify:\/\/shop_images\/misto-retro-shpalery-1920x1080_48.jpg",
-        "adapt_height_first_image": true,
+        "adapt_height_first_image": false,
         "desktop_text_box_position": "flex-end",
         "show_text_box": true,
         "image_overlay_opacity": 0,
