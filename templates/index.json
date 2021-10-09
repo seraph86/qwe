@@ -10,6 +10,12 @@
             "heading_size": "medium"
           }
         },
+        "52a11433-a14f-48b9-9714-d486add6ea37": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -24,12 +30,13 @@
       },
       "block_order": [
         "heading",
+        "52a11433-a14f-48b9-9714-d486add6ea37",
         "button"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/bmw-m2-nfs-raining-4k-ww.jpg",
         "image_2": "shopify:\/\/shop_images\/misto-retro-shpalery-1920x1080_48.jpg",
-        "adapt_height_first_image": false,
+        "adapt_height_first_image": true,
         "desktop_text_box_position": "flex-end",
         "show_text_box": true,
         "image_overlay_opacity": 0,
