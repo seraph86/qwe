@@ -10,6 +10,12 @@
             "heading_size": "medium"
           }
         },
+        "52a11433-a14f-48b9-9714-d486add6ea37": {
+          "type": "text",
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template."
+          }
+        },
         "button": {
           "type": "buttons",
           "settings": {
@@ -24,6 +30,7 @@
       },
       "block_order": [
         "heading",
+        "52a11433-a14f-48b9-9714-d486add6ea37",
         "button"
       ],
       "settings": {
