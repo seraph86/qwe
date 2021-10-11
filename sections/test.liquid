@@ -1,10 +1,13 @@
-{{ section.settings.text }}
+{{ section.settings.title }}
 <br/>
 {%- for block in section.blocks -%}
     {%- case block.type -%}
         {%- when 'announcement' -%}
-            {{block.settings.qwer}}
+            {{block.settings.heading}}
             <br/>
+            {{block.settings.title}}
+            <br/>
+            {{block.settings.text}}
         {%- else -%}
     {%- endcase -%}
 {%- endfor -%}
@@ -16,9 +19,13 @@
     "settings": [
         {
             "type": "text",
-            "id": "text",
-            "placeholder": "A placeholder value for the input",
-            "label": "section title"
+            "id": "qwe",
+            "label": "B"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "A"
         }
     ],
     "blocks": [
@@ -28,12 +35,28 @@
             "settings": [
                 {
                     "type": "text",
-                    "id": "qwer",
-                    "label": "block title",
-                    "info": "More info about Block",
-                    "placeholder": "A placeholder value for the input"
+                    "id": "heading",
+                    "label": "1"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "2"
+                },
+                {
+                    "type": "text",
+                    "id": "text",
+                    "label": "3"
                 }
             ]
+        }
+    ],
+    "preset":[
+        {
+            "name": "Testing",
+            "settings": {
+                "title": "Yo"
+            }
         }
     ]
 }

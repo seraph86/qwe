@@ -3,13 +3,12 @@
     "test": {
       "type": "test",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {}
+        "announcement": {
+          "type": "announcement"
         }
       },
       "block_order": [
-        "title"
+        "announcement"
       ]
     },
     "main": {
@@ -36,7 +35,8 @@
         },
         "content": {
           "type": "content",
-          "settings": {}
+          "settings": {
+          }
         }
       },
       "block_order": [
