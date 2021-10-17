@@ -1,13 +1,18 @@
-{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
 
-{% style %}
-    .swiper {
-        height: 75rem;
-    }
-    .swiper-slide__img{
-        width: 100%;
-    }
-{% endstyle %}
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+
+{% stylesheet %}
+.swiper {
+    max-height: 75rem;
+}
+.swiper-slide__img{
+    width: 100%;
+}
+.swiper-button-prev, .swiper-button-next{
+    display: block !important;
+}
+{% endstylesheet %}
 
 <!-- Slider main container -->
 <div class="swiper">
@@ -15,7 +20,7 @@
     <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
             {%- case block.type -%}
-                {%- when 'announcement' -%}
+                {%- when 'slide' -%}
                 <!-- Slides -->
                 <div class="swiper-slide">
                     <img class="swiper-slide__img" src="{{ block.settings.slide | img_url: '1500x'  }}" alt="">
@@ -24,8 +29,11 @@
             {%- endcase -%}
         {%- endfor -%}
     </div>
+    
+    {% if section.settings.pagination %}
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
+    {% endif %}
 
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
@@ -36,44 +44,41 @@
 </div>
 
 {% javascript %}
-    const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-  
-    // If we need pagination
+document.addEventListener('DOMContentLoaded', e => {
+  var swiper = new Swiper(".swiper", {
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
+      type: "progressbar",
     },
-  
-    // Navigation arrows
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    // And if we need scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
+})
 {% endjavascript %}
 
 {% schema %}
 {
-    "name": "Testing",
+    "name": "Slideshow",
     "tag": "section",
     "settings": [
         {
             "type": "text",
             "id": "title",
-            "label": "A"
+            "label": "Aa"
+        },
+        {
+            "type": "checkbox",
+            "id": "pagination",
+            "label": "Pagination",
+            "default": true
         }
     ],
     "blocks": [
         {
-            "name": "Announcement",
-            "type": "announcement",
+            "name": "Slide",
+            "type": "slide",
             "settings": [
                 {
                     "type": "image_picker",
@@ -85,7 +90,7 @@
     ],
     "presets":[
         {
-            "name": "Testing",
+            "name": "Slideshow",
             "settings": {
                 "title": "Yo"
             }
