@@ -21,7 +21,7 @@
         <!-- Slides -->
         {%- for block in section.blocks -%}
 
-            <div class="swiper-slide">
+            <div class="swiper-slide" {{ block.shopify_attributes }}>
                 {%- if block.settings.image == blank -%}
                     {%- capture current -%}{% cycle 1, 2 %}{%- endcapture -%}
                     {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
@@ -48,17 +48,21 @@
 
 {% javascript %}
 document.addEventListener('DOMContentLoaded', e => {
-  var swiper = new Swiper(".swiper", {
+  swiperInit()
+})
+
+const swiperInit = () => {
+  new Swiper(".swiper", {
     pagination: {
       el: ".swiper-pagination",
-      type: "progressbar",
+      type: "bullets",
     },
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
   });
-})
+}
 {% endjavascript %}
 
 {% schema %}
