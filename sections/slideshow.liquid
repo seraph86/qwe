@@ -50,15 +50,12 @@
 document.addEventListener('DOMContentLoaded', e => {
   swiperInit()
 })
-document.addEventListener('shopify:section:load', e => {
-  swiperInit()
-})
 
 const swiperInit = () => {
   new Swiper(".swiper", {
     pagination: {
       el: ".swiper-pagination",
-      type: "bullets",
+      type: "progressbar",
     },
     navigation: {
       nextEl: ".swiper-button-next",
