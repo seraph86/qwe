@@ -17,18 +17,12 @@
           "type": "slide",
           "settings": {
           }
-        },
-        "8d66a79d-f167-4faf-986e-0678db0c18ea": {
-          "type": "slide",
-          "settings": {
-          }
         }
       },
       "block_order": [
         "slide1",
         "slide2",
-        "slide3",
-        "8d66a79d-f167-4faf-986e-0678db0c18ea"
+        "slide3"
       ],
       "settings": {
         "title": "",
