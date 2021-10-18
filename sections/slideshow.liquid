@@ -18,18 +18,21 @@
 <div class="swiper">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
+        <!-- Slides -->
         {%- for block in section.blocks -%}
-            {%- case block.type -%}
-                {%- when 'slide' -%}
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <img class="swiper-slide__img" src="{{ block.settings.slide | img_url: '1500x'  }}" alt="">
-                </div>
+
+            <div class="swiper-slide">
+                {%- if block.settings.image == blank -%}
+                    {%- capture current -%}{% cycle 1, 2 %}{%- endcapture -%}
+                    {{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- else -%}
-            {%- endcase -%}
+                    <img class="swiper-slide__img" src="{{ block.settings.image | img_url: '1500x'  }}" alt="">
+                {%- endif -%}
+            </div>
+
         {%- endfor -%}
     </div>
-    
+
     {% if section.settings.pagination %}
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
@@ -77,24 +80,32 @@ document.addEventListener('DOMContentLoaded', e => {
     ],
     "blocks": [
         {
-            "name": "Slide",
             "type": "slide",
+            "name": "Slide",
             "settings": [
                 {
                     "type": "image_picker",
-                    "id": "slide",
+                    "id": "image",
                     "label": "Slide"
                 }
             ]
         }
     ],
-    "presets":[
+  "presets": [
+    {
+      "name": "Slideshow",
+      "blocks": [
         {
-            "name": "Slideshow",
-            "settings": {
-                "title": "Yo"
-            }
+          "type": "slide"
+        },
+        {
+          "type": "slide"
+        },
+        {
+          "type": "slide"
         }
-    ]
+      ]
+    }
+  ]
 }
 {% endschema %}
