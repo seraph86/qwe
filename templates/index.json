@@ -4,20 +4,30 @@
       "type": "slideshow",
       "blocks": {
         "slide1": {
-          "type": "slide"
+          "type": "slide",
+          "settings": {
+          }
         },
         "slide2": {
-          "type": "slide"
+          "type": "slide",
+          "settings": {
+          }
         },
         "slide3": {
-          "type": "slide"
+          "type": "slide",
+          "settings": {
+          }
         }
       },
       "block_order": [
         "slide1",
         "slide2",
         "slide3"
-      ]
+      ],
+      "settings": {
+        "title": "",
+        "pagination": true
+      }
     },
     "image_banner": {
       "type": "image-banner",
