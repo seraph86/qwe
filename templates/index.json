@@ -20,9 +20,9 @@
         }
       },
       "block_order": [
-        "163467769476ff80e9-0",
-        "163467769476ff80e9-1",
-        "163467769476ff80e9-2"
+        "slide-0",
+        "slide-1",
+        "slide-2"
       ],
       "settings": {
         "pagitype": "bullets"
