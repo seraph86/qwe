@@ -1,32 +1,31 @@
 {
   "sections": {
-    "slideshow": {
+    "163467769476ff80e9": {
       "type": "slideshow",
       "blocks": {
-        "slide1": {
+        "163467769476ff80e9-0": {
           "type": "slide",
           "settings": {
           }
         },
-        "slide2": {
+        "163467769476ff80e9-1": {
           "type": "slide",
           "settings": {
           }
         },
-        "slide3": {
+        "163467769476ff80e9-2": {
           "type": "slide",
           "settings": {
           }
         }
       },
       "block_order": [
-        "slide1",
-        "slide2",
-        "slide3"
+        "163467769476ff80e9-0",
+        "163467769476ff80e9-1",
+        "163467769476ff80e9-2"
       ],
       "settings": {
-        "title": "",
-        "pagination": true
+        "pagitype": "bullets"
       }
     },
     "image_banner": {
@@ -217,7 +216,7 @@
     }
   },
   "order": [
-    "slideshow",
+    "163467769476ff80e9",
     "image_banner",
     "rich_text",
     "featured_products",
