@@ -17,7 +17,7 @@
 <!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" data-pagi="{{ section.settings.pagitype }}">
         <!-- Slides -->
         {%- for block in section.blocks -%}
 
@@ -33,10 +33,8 @@
         {%- endfor -%}
     </div>
 
-    {% if section.settings.pagination %}
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
-    {% endif %}
 
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
@@ -55,10 +53,11 @@ document.addEventListener('shopify:section:load', e => {
 })
 
 const swiperInit = () => {
+  let pagiType = document.querySelector('.swiper-wrapper').dataset.pagi;
   new Swiper(".swiper", {
     pagination: {
       el: ".swiper-pagination",
-      type: "progressbar",
+      type: pagiType,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -68,36 +67,49 @@ const swiperInit = () => {
 }
 {% endjavascript %}
 
-{% schema %}
-{
-    "name": "Slideshow",
-    "tag": "section",
-    "settings": [
+
+{% schema %}{
+  "name": "Slideshow",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "pagitype",
+      "label": "Pagitype",
+      "options": [
         {
-            "type": "text",
-            "id": "title",
-            "label": "Aa"
+          "value": "bullets",
+          "label": "Bullets"
         },
         {
-            "type": "checkbox",
-            "id": "pagination",
-            "label": "Pagination",
-            "default": true
-        }
-    ],
-    "blocks": [
+          "value": "fraction",
+          "label": "Fraction"
+        },
         {
-            "type": "slide",
-            "name": "Slide",
-            "settings": [
-                {
-                    "type": "image_picker",
-                    "id": "image",
-                    "label": "Slide"
-                }
-            ]
+          "value": "progressbar",
+          "label": "Progressbar"
+        },
+        {
+          "value": "custom",
+          "label": "Custom"
         }
-    ],
+      ],
+      "default": "bullets"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Slideshow",
@@ -114,5 +126,4 @@ const swiperInit = () => {
       ]
     }
   ]
-}
-{% endschema %}
+}{% endschema %}
