@@ -1,33 +1,5 @@
 {
   "sections": {
-    "slideshow": {
-      "type": "slideshow",
-      "blocks": {
-        "slide1": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide2": {
-          "type": "slide",
-          "settings": {
-          }
-        },
-        "slide3": {
-          "type": "slide",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "slide1",
-        "slide2",
-        "slide3"
-      ],
-      "settings": {
-        "pagitype": "bullets"
-      }
-    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -216,7 +188,6 @@
     }
   },
   "order": [
-    "slideshow",
     "image_banner",
     "rich_text",
     "featured_products",
