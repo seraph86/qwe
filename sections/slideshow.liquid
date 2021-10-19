@@ -20,7 +20,6 @@
     <div class="swiper-wrapper" data-pagi="{{ section.settings.pagitype }}">
         <!-- Slides -->
         {%- for block in section.blocks -%}
-
             <div class="swiper-slide" {{ block.shopify_attributes }}>
                 {%- if block.settings.image == blank -%}
                     {%- capture current -%}{% cycle 1, 2 %}{%- endcapture -%}
@@ -29,7 +28,6 @@
                     <img class="swiper-slide__img" src="{{ block.settings.image | img_url: '1500x'  }}" alt="">
                 {%- endif -%}
             </div>
-
         {%- endfor -%}
     </div>
 
