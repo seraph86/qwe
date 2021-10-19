@@ -1,19 +1,19 @@
 {
   "sections": {
-    "163467769476ff80e9": {
+    "slideshow": {
       "type": "slideshow",
       "blocks": {
-        "163467769476ff80e9-0": {
+        "slide-0": {
           "type": "slide",
           "settings": {
           }
         },
-        "163467769476ff80e9-1": {
+        "slide-1": {
           "type": "slide",
           "settings": {
           }
         },
-        "163467769476ff80e9-2": {
+        "slide-2": {
           "type": "slide",
           "settings": {
           }
