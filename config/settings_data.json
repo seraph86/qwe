@@ -32,8 +32,8 @@
         "type": "header",
         "settings": {
           "color_scheme": "background-1",
-          "logo": "shopify:\/\/shop_images\/l2.png",
-          "logo_width": 120,
+          "logo": "shopify:\/\/shop_images\/Screenshot.png",
+          "logo_width": 60,
           "logo_position": "middle-left",
           "menu": "main-menu",
           "show_line_separator": true,
