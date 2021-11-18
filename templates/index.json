@@ -6,19 +6,33 @@
         "slide-0": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/lampion-lamp-free-background-for-computer-2K-wallpaper-middle-size.jpg"
+            "image": "shopify:\/\/shop_images\/bmw-m2-nfs-raining-4k-ww.jpg"
           }
         },
         "slide-1": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/room-lamp-simple-white-wallpaper-preview.jpg"
+            "image": "shopify:\/\/shop_images\/mclaren_720s_silverstone_aero_by_vorsteiner_4k_8k_3-1920x1080.jpg"
+          }
+        },
+        "4b300ae7-39f1-4c02-b425-adea194ebc32": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/car-wallpaper-20122113402517.jpg"
+          }
+        },
+        "ccf34efc-3ed7-44e7-aeac-c38318b65c7c": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/thumb-1920-958491.jpg"
           }
         }
       },
       "block_order": [
         "slide-0",
-        "slide-1"
+        "slide-1",
+        "4b300ae7-39f1-4c02-b425-adea194ebc32",
+        "ccf34efc-3ed7-44e7-aeac-c38318b65c7c"
       ],
       "settings": {
         "pagitype": "bullets"
