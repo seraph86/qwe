@@ -1,28 +1,30 @@
 {
   "sections": {
+    "16372287079dd91042": {
+      "type": "test",
+      "settings": {
+        "title": "Yo"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
         "slide-0": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/lampion-lamp-free-background-for-computer-2K-wallpaper-middle-size.jpg"
           }
         },
         "slide-1": {
           "type": "slide",
           "settings": {
-          }
-        },
-        "slide-2": {
-          "type": "slide",
-          "settings": {
+            "image": "shopify:\/\/shop_images\/room-lamp-simple-white-wallpaper-preview.jpg"
           }
         }
       },
       "block_order": [
         "slide-0",
-        "slide-1",
-        "slide-2"
+        "slide-1"
       ],
       "settings": {
         "pagitype": "bullets"
@@ -216,6 +218,7 @@
     }
   },
   "order": [
+    "16372287079dd91042",
     "slideshow",
     "image_banner",
     "rich_text",
